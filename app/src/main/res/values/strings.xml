@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">postboard</string>
+
+    <string name="facebook_app_id">1003471596333622</string>
+    <string name="fb_login_protocol_scheme">fb1003471596333622</string>
+
+    <string name="server_client_id">512214949156-6nkvvrr6j6hlm9jk2ohditl7p03qckaq.apps.googleusercontent.com</string>
+    <string name="google_redirect_uri">http://postboard.online</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_notifications">Notifications</string>
+    <string name="action_profile">My Profile</string>
+    <string name="content_description_image">Image</string>
+    <string name="content_description_like">like button</string>
+    <string name="content_description_dislike">dislike button</string>
+    <string name="content_description_comment_view">comment view</string>
+    <string name="view_full_post">View full post</string>
+    <string name="view_all_content">…continue reading</string>
+
+    <string name="dialog_action_ok">OK</string>
+    <string name="dialog_action_cancel">Cancel</string>
+    <string name="dialog_error_title">Sorry</string>
+
+    <string name="nothing_to_load">Empty</string>
+    <string name="empty_items">No more items to load</string>
+    <string name="error_timeout_content">Timeout occurs while connecting to server</string>
+    <string name="error_loading_content">An error occurred loading this content</string>
+    <string name="error_network_connect">Can\'t connect to the server. Please cehck your Internet connection.</string>
+    <string name="title_activity_sign_in">ActivitySignIn</string>
+
+    <string name="title_activity_article_detail">ArticleDetailActivity</string>
+    <string name="title_activity_new_article">NewArticleActivity</string>
+    <string name="title_activity_sub_comment">SubCommentActivity</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
+
+    <string name="comments_title">Comments</string>
+    <string name="comment_box_hint">Add a comment</string>
+    <string name="email_hint">EMAIL</string>
+    <string name="password_hint">PASSWORD</string>
+    <string name="linked_comment">LINKED COMMENT</string>
+    <string name="seperator_dot">●</string>
+    <string name="reply_text">REPLY</string>
+    <string name="view_more_text">view post</string>
+    <string name="search_hint">Search</string>
+
+
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="online.postboard.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:name=".BoilerplateApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyAppTheme"
+        tools:replace="android:allowBackup">
+
+        <!-- Mqtt Service -->
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <service
+            android:name=".data.MyMQTTService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name=".receivers.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:configChanges="screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="postboard.online"
+                    android:scheme="http" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".ui.signin.SignInActivity"
+            android:label="@string/title_activity_sign_in"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.detail.ArticleDetailActivity"
+            android:label="@string/title_activity_article_detail"
+            android:theme="@style/MyAppTheme.SwipeBack" />
+        <activity
+            android:name=".ui.articlenew.NewArticleActivity"
+            android:label="@string/title_activity_new_article"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".ui.subcomment.SubCommentActivity"
+            android:label="@string/title_activity_sub_comment"
+            android:theme="@style/MyAppTheme.SwipeBack" />
+        <activity
+            android:name=".ui.userprofile.UserProfileActivity"
+            android:label="@string/title_activity_user_profile" />
+        <activity android:name=".ui.search.SearchActivity" />
+        <activity android:name=".ui.notifications.NotificationActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.webview.WebViewActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_border"
+        android:clipToPadding="false"
+        android:descendantFocusability="blocksDescendants"
+        android:focusable="false"
+        android:paddingBottom="@dimen/reply_box_height"
+        android:paddingTop="@dimen/my_action_bar_height"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+         />
+
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_action_bar_height"
+        android:background="@drawable/rounded_border_top_half"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:id="@+id/back_button_layout"
+            android:layout_width="@dimen/my_action_bar_height"
+            android:layout_height="@dimen/my_action_bar_height"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="@dimen/margin_half">
+
+
+            <ImageButton
+                android:id="@+id/back_button_custom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                app:srcCompat="@drawable/ic_action_arrow_back" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:inputType="textNoSuggestions"
+            android:layout_height="match_parent"
+            android:hint="@string/search_hint"
+            android:gravity="center_vertical"
+            android:focusable="true"
+            android:clickable="true" />
+
+        <ImageButton
+            android:layout_width="@dimen/my_action_bar_height"
+            android:layout_height="@dimen/my_action_bar_height"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:clickable="false"
+            android:duplicateParentState="true"
+            android:scaleType="fitCenter"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/margin_half"
+            android:padding="@dimen/margin_quarter"
+            app:srcCompat="@drawable/ic_action_search" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/toolbar_layout"
+        android:background="@drawable/shadow_8_s" />
+
+</RelativeLayout>

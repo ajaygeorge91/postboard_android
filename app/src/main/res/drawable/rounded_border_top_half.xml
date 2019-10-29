@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetBottom="-1dip">
+    <shape>
+
+        <solid android:color="@color/white" />
+        <stroke
+            android:width="1dip"
+            android:color="@color/border_color" />
+        <corners
+            android:topLeftRadius="@dimen/rounded_border_radius"
+            android:topRightRadius="@dimen/rounded_border_radius" />
+    </shape>
+</inset>

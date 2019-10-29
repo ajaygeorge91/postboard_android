@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_half"
+    android:layout_marginLeft="@dimen/margin_full"
+    android:layout_marginRight="@dimen/margin_full"
+    android:layout_marginTop="@dimen/margin_half">
+
+    <TextView
+        android:id="@+id/item_node_label_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/linked_comment"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/text_small_body" />
+
+</RelativeLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    tools:activity=".ui.main.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_action_bar_height"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_semi_transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/margin_half"
+                android:paddingStart="@dimen/margin_half">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:paddingLeft="@dimen/margin_full"
+                        android:paddingRight="@dimen/margin_full"
+                        android:text="@string/app_name"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_subheading"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:id="@+id/action_search_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="4dp">
+
+                    <ImageButton
+                        android:layout_width="@dimen/standard_icon_size"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/ic_action_search"
+                        android:tint="@color/black_54" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/action_notification_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="4dp">
+
+                    <ImageButton
+                        android:id="@+id/action_notification"
+                        android:layout_width="@dimen/standard_icon_size"
+                        android:layout_height="@dimen/standard_icon_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/transparent"
+                        android:clickable="false"
+                        android:scaleType="fitCenter"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/ic_action_notifications"
+                        android:tint="@color/black_54" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/standard_icon_size"
+                        android:layout_height="@dimen/standard_icon_size"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/notification_badge_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginStart="12dp"
+                            android:background="@drawable/notification_badge"
+                            android:clickable="false"
+                            android:duplicateParentState="true"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="7sp"
+                            android:visibility="gone"
+                            tools:text="9+" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/shadow_8_s"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/shadow_8_s_inv" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_component_height"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/margin_half"
+            android:paddingStart="@dimen/margin_half">
+
+
+            <RelativeLayout
+                android:id="@+id/action_home_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="4dp">
+
+                <ImageButton
+                    android:id="@+id/action_home"
+                    android:layout_width="@dimen/standard_icon_size"
+                    android:layout_height="@dimen/standard_icon_size"
+                    android:background="@color/transparent"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_action_home" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:id="@+id/action_profile_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="4dp">
+
+                <online.postboard.android.util.widgets.CircularImageView
+                    android:id="@+id/action_profile"
+                    android:layout_width="@dimen/standard_icon_size"
+                    android:layout_height="@dimen/standard_icon_size"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/ic_action_avatar"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="1dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

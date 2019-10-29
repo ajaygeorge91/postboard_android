@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">@color/white_shade</color>
+    <color name="primary_dark">@color/black_tint_8</color>
+    <color name="status_bar_color">@color/white</color>
+    <color name="primary_light">@color/white</color>
+    <color name="accent">@color/black_shade</color>
+    <color name="primary_text">@color/black_shade</color>
+    <color name="primary_text_light">#39434c</color>
+    <color name="secondary_text">#bababa</color>
+    <color name="secondary_text_light">#d2d2d2</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="info_icon_color">#c5cfd9</color>
+    <color name="info_icon_color_light">#bcc5cfd9</color>
+
+    <color name="common_bg">@color/white_shade</color>
+    <!--<color name="common_bg">@color/alice_blue</color>-->
+    <color name="common_bg_semi_transparent">@color/alice_blue_semi_transparent</color>
+    <color name="separator_color_light">#0b000000</color>
+    <color name="separator_color">#0c000000</color>
+    <color name="primary_alpha_40">#669C27B0</color>
+    <color name="gray">#ffdfdfdf</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="black_87">#de000000</color>
+    <color name="black_54">@color/black_tint_4</color>
+    <color name="black_21">@color/black_tint_6</color>
+    <color name="black_21_transparent">#29000000</color>
+
+    <color name="black_overlay_2">#AA000000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="black_overlay_1">#36000000</color>
+    <color name="action">#311b92</color>
+    <color name="like">#33691e</color>
+    <color name="disllike">#b71c1c</color>
+
+    <color name="place_holder_color">@color/black_tint_9</color>
+    <color name="notification_badge_color">#f1d50000</color>
+
+    <color name="prim">#E0D9DD</color>
+    <color name="emperor">#494445</color>
+    <color name="nice_dark_shade">#343642</color>
+    <color name="nice_dark_shade_shade">#DBD5CB</color>
+    <color name="link">#C9CDD5</color>
+    <color name="blue_1">#5876cf</color>
+    <color name="blue_2">#662672</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="blue_gray_1">#2C3646</color>
+    <color name="my_bg">#F7F8FB</color>
+    <color name="border_color">@color/black_tint_9</color>
+
+    <color name="black_tint_1">#191919</color>
+    <color name="black_tint_2">#323232</color>
+    <color name="black_tint_3">#4c4c4c</color>
+    <color name="black_tint_4">#666666</color>
+    <color name="black_tint_5">#7f7f7f</color>
+    <color name="black_tint_6">#999999</color>
+    <color name="black_tint_7">#b2b2b2</color>
+    <color name="black_tint_8">#cccccc</color>
+    <color name="black_tint_9">#e5e5e5</color>
+
+
+    <color name="alice_blue">#FAFBFD</color>
+    <color name="alice_blue_semi_transparent">#d0fafbfd</color>
+    <color name="primary_color_semi_transparent">#f6ffffff</color>
+    <color name="light_sky_blue">#93C6F9</color>
+    <color name="light_sky_blue_dark">#6196c6</color>
+    <color name="light_sky_blue_really_dark">#4980b2</color>
+    <color name="light_sky_blue_really_dark_adjusted">#FA4980b2</color>
+    <color name="light_sky_blue_dark_adjusted">#FA6196c6</color>
+    <color name="cornflower_blue_adjusted">#fa759bf3</color>
+    <color name="cornflower_blue">#759BF3</color>
+    <color name="cornflower_blue_dark">#3e6dc0</color>
+    <color name="hawkes_blue">#D0D8EE</color>
+    <color name="solitude">#DCE5F2</color>
+    <color name="ghost_white">#f2f2f5</color>
+    <color name="medium_purple">#A768FE</color>
+    <color name="dark_purple">#7339ca</color>
+    <color name="heliotrope">#C673FE</color>
+
+    <color name="colorOverlay">#78ffffff</color>
+    <color name="black_shade">#232323</color>
+    <color name="white_shade">#fcfcfd</color>
+    <color name="white_blue_shade">#f5f5f5</color>
+    <color name="white_semi_transparent">#faffffff</color>
+    <color name="azure">#FBFDFD</color>
+    <color name="link_water">#CBD2DB</color>
+    <color name="pattens_blue">#D6EBF3</color>
+    <color name="polo_blue">#8AADC9</color>
+    <color name="sail">#A8CDE2</color>
+
+    <color name="nice_grey">#efefef</color>
+    <color name="nice_grey_1">#FAFAFA</color>
+
+
+</resources>

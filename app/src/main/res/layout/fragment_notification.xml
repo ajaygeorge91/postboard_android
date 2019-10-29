@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:activity="online.postboard.android.ui.notifications.NotificationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/profile_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_bg"
+            android:clipToPadding="false"
+            android:paddingTop="@dimen/my_action_bar_height"
+            android:paddingBottom="?attr/actionBarSize"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_article" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutSignInPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/layout_signin_prompt" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

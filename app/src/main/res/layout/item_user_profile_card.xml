@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <online.postboard.android.util.widgets.CircularImageView
+        android:id="@+id/image_profile_user"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_full"
+        android:background="@drawable/all_circle_white_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin_full">
+
+        <TextView
+            android:id="@+id/text_profile_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold"
+            tools:text="John Smith" />
+
+        <TextView
+            android:id="@+id/text_profile_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:textSize="@dimen/text_body"
+            android:visibility="gone"
+            tools:text="about me" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

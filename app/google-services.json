@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "759254308916",
+    "project_id": "essential-city-138823"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759254308916:android:af61452093e3af27",
+        "android_client_info": {
+          "package_name": "online.postboard.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759254308916-vss6gj4kdbd3ef9dapul9hih3nt26n9d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "online.postboard.android",
+            "certificate_hash": "b37ed931fcc6cb1b385f2aea9ee3d8b90a9b5669"
+          }
+        },
+        {
+          "client_id": "759254308916-7re98dbsbs37o963iresiu11jml613ue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAzeDMXyrFLjLAn9P9hk0WjpZWgxnyJxE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

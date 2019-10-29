@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:background="@color/black_21_transparent"
+    tools:activity=".SubCommentActivity">
+
+    <online.postboard.android.util.widgets.SwipeBackLayout
+        android:id="@+id/swipe_layout_sub_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true" >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/sub_comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_border"
+                android:descendantFocusability="blocksDescendants"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/reply_box_height"
+                android:paddingTop="@dimen/my_action_bar_height"
+                app:layoutManager="LinearLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:listitem="@layout/item_sub_comment"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <LinearLayout
+                android:id="@+id/reply_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/rounded_border_top_free"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_reply" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/my_action_bar_height"
+                android:background="@drawable/rounded_border_top_half">
+
+                <RelativeLayout
+                    android:id="@+id/back_button_layout"
+                    android:layout_width="@dimen/my_action_bar_height"
+                    android:layout_height="@dimen/my_action_bar_height"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_half">
+
+                    <online.postboard.android.util.widgets.CircleProgressBar
+                        android:id="@+id/progressbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:background_color="@android:color/transparent"
+                        app:progress_color="@color/black_overlay_1"
+                        android:duplicateParentState="true"
+                        android:clickable="false"
+                        app:stroke_width="2dp" />
+
+                    <ImageButton
+                        android:id="@+id/back_button_custom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@color/transparent"
+                        android:duplicateParentState="true"
+                        android:clickable="false"
+                        app:srcCompat="@drawable/ic_action_arrow_back" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_below="@+id/toolbar_layout"
+                android:background="@drawable/shadow_8_s" />
+
+        </RelativeLayout>
+
+    </online.postboard.android.util.widgets.SwipeBackLayout>
+
+</RelativeLayout>

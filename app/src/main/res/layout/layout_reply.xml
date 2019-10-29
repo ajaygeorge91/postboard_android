@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reply_layout_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_transparent"
+    android:minHeight="@dimen/reply_box_height"
+    android:paddingLeft="@dimen/margin_full"
+    android:paddingRight="@dimen/margin_full"
+    android:orientation="horizontal">
+
+    <online.postboard.android.util.widgets.CircularImageView
+        android:id="@+id/image_user"
+        app:civ_border_width="1dp"
+        android:layout_width="@dimen/standard_icon_size"
+        android:layout_height="@dimen/standard_icon_size"
+        android:layout_gravity="center"
+        android:background="@drawable/all_circle_white_bg" />
+
+    <EditText
+        android:id="@+id/text_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:textSize="@dimen/text_body"
+        android:layout_marginLeft="@dimen/margin_full"
+        android:layout_marginRight="@dimen/margin_full"
+        android:hint="@string/comment_box_hint"  />
+
+    <ImageButton
+        android:id="@+id/comment_send_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="@dimen/margin_half"
+        android:layout_marginTop="@dimen/margin_half"
+        android:background="@color/transparent"
+        android:tint="@color/nice_dark_shade"
+        app:srcCompat="@drawable/ic_menu_send" />
+
+</LinearLayout>

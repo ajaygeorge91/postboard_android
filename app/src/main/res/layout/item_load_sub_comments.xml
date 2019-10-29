@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/load_more_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="@dimen/margin_full"
+        android:padding="@dimen/margin_full"
+        android:background="?attr/selectableItemBackground"
+        tools:text="Load more subcomments"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/text_body"  />
+
+</LinearLayout>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_half"
+    android:layout_marginTop="@dimen/margin_half"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/article_padding"
+        android:layout_marginRight="@dimen/article_padding"
+        android:background="@drawable/article_border"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/article_user_detail_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_component_height"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+
+            <online.postboard.android.util.widgets.CircularImageView
+                android:id="@+id/image_article_user"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/article_side_margin"
+                android:layout_marginStart="@dimen/article_side_margin"
+                android:background="@drawable/all_circle_white_bg"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                app:civ_border_width="1dp" />
+
+            <TextView
+                android:id="@+id/text_created_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:lines="1"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_body"
+                tools:text="John Smith" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/text_created_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:lines="1"
+                android:paddingEnd="@dimen/article_side_margin"
+                android:paddingStart="@dimen/article_side_margin"
+                android:textColor="@color/secondary_text_light"
+                android:textSize="@dimen/text_small_body"
+                tools:text="5 minutes ago" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line_separator" />
+
+        <LinearLayout
+            android:id="@+id/item_article_area"
+            android:background="?attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/article_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_content_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_full"
+                android:duplicateParentState="true"
+                android:layout_marginEnd="@dimen/article_side_margin"
+                android:layout_marginStart="@dimen/article_side_margin"
+                android:layout_marginTop="@dimen/margin_full"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="@dimen/line_spacing_extra_std"
+                android:maxLines="8"
+                android:textColor="@color/primary_text_light"
+                android:textSize="@dimen/text_body"
+                tools:text="Lorem Ipsum ഇന്റര്‍നെറ്റ് is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" />
+
+            <ImageView
+                android:id="@+id/image_article"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:background="@color/place_holder_color"
+                android:contentDescription="@string/content_description_image"
+                android:minHeight="50dp" />
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/article_side_margin"
+                android:layout_marginStart="@dimen/article_side_margin"
+                android:duplicateParentState="true"
+                android:layout_marginTop="@dimen/margin_half"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/line_spacing_extra_std"
+                android:maxLength="140"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="A side ഇന്റര്‍നെറ്റ് navigation menu with icons, avatars, and text aligned the right." />
+
+
+            <TextView
+                android:id="@+id/text_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:layout_marginEnd="@dimen/article_side_margin"
+                android:layout_marginStart="@dimen/article_side_margin"
+                android:layout_marginTop="@dimen/margin_half"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/line_spacing_extra_std"
+                android:maxLines="4"
+                android:textColor="@color/primary_text_light"
+                android:textSize="@dimen/text_body"
+                tools:text="Lorem Ipsum ഇന്റര്‍നെറ്റ് is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s" />
+
+            <LinearLayout
+                android:id="@+id/text_link_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_half"
+                android:paddingEnd="@dimen/article_side_margin"
+                android:paddingStart="@dimen/article_side_margin"
+                android:paddingTop="@dimen/margin_half"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/image_link"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+
+                <TextView
+                    android:id="@+id/text_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra_std"
+                    android:maxLines="1"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/text_body"
+                    android:layout_marginStart="@dimen/margin_half"
+                    android:layout_marginEnd="@dimen/margin_half"
+                    tools:text="www.stackoverflow.com" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line_separator" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_component_height"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/rating_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:minEms="3"
+                android:paddingEnd="@dimen/article_side_margin"
+                android:paddingStart="@dimen/article_side_margin"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_button"
+                android:textStyle="bold"
+                tools:text="-1" />
+
+            <ImageButton
+                android:id="@+id/image_view_like"
+                android:layout_width="@dimen/common_component_height"
+                android:layout_height="@dimen/common_component_height"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/content_description_like"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_thumb_up"
+                android:tint="@color/info_icon_color" />
+
+            <ImageButton
+                android:id="@+id/image_view_dislike"
+                android:layout_width="@dimen/common_component_height"
+                android:layout_height="@dimen/common_component_height"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/content_description_like"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_thumb_down"
+                android:tint="@color/info_icon_color" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:id="@+id/share_button"
+                android:layout_width="@dimen/my_action_bar_height"
+                android:layout_height="@dimen/my_action_bar_height"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="@dimen/margin_half">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@android:drawable/ic_menu_share" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_status_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="@dimen/common_component_height"
+                    android:layout_height="@dimen/common_component_height"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:contentDescription="@string/content_description_comment_view"
+                    android:duplicateParentState="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_comment"
+                    android:tint="@color/info_icon_color" />
+
+                <TextView
+                    android:id="@+id/comment_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:gravity="end|center_vertical"
+                    android:lines="1"
+                    android:minEms="2"
+                    android:paddingEnd="@dimen/article_side_margin"
+                    android:paddingStart="@dimen/article_side_margin"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/text_button"
+                    android:textStyle="bold"
+                    tools:text="441" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

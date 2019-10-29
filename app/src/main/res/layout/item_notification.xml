@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notification_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/common_bg"
+    android:minHeight="@dimen/standard_item_height"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_line_separator" />
+
+    <TextView
+        android:id="@+id/messageTitle"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_quarter"
+        android:layout_marginLeft="@dimen/margin_full"
+        android:layout_marginRight="@dimen/margin_full"
+        android:layout_marginTop="@dimen/margin_full"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_body"
+        android:textStyle="bold"
+        tools:text="hello world..." />
+
+    <TextView
+        android:id="@+id/messageTime"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_half"
+        android:layout_marginLeft="@dimen/margin_full"
+        android:layout_marginRight="@dimen/margin_full"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/text_small_body"
+        tools:text="12 Aug 2015" />
+
+    <TextView
+        android:id="@+id/messageContent"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_full"
+        android:layout_marginLeft="@dimen/margin_full"
+        android:layout_marginRight="@dimen/margin_full"
+        android:textColor="@color/primary_text_light"
+        android:textSize="@dimen/text_body"
+        tools:text="hello world..." />
+
+</LinearLayout>

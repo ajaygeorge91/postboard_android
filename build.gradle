@@ -1,0 +1,29 @@
+buildscript {
+    ext.kotlin_version = '1.1.51'
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://repo.eclipse.org/content/repositories/paho-snapshots/" }
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.github.triplet.gradle:play-publisher:1.1.4'
+        //noinspection GradleDynamicVersion
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'me.tatarka:gradle-retrolambda:3.6.1'
+        classpath 'com.google.gms:google-services:3.0.0'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.1'
+    distributionUrl = distributionUrl.replace("bin", "all")
+}

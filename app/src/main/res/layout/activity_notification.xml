@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".ui.notifications.NotificationActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/profile_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_bg"
+        android:clipToPadding="false"
+        android:paddingBottom="?attr/actionBarSize"
+        android:paddingTop="@dimen/my_action_bar_height"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_notification" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_user_profile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_action_bar_height"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/status_bar_color"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/back_button_layout_notifications"
+                android:layout_width="@dimen/my_action_bar_height"
+                android:layout_height="@dimen/my_action_bar_height"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="@dimen/margin_half">
+
+                <ImageButton
+                    android:id="@+id/back_button_notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_action_arrow_back" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/action_notifications"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_body" />
+
+            <View
+                android:layout_width="@dimen/my_action_bar_height"
+                android:layout_height="@dimen/my_action_bar_height" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@+id/appbar_notification"
+        android:background="@drawable/shadow_8_s" />
+
+
+</android.support.design.widget.CoordinatorLayout>

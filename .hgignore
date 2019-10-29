@@ -1,0 +1,8 @@
+syntax: glob
+.git
+.idea
+.gradle
+*.iml
+app/build
+build
+local.properties

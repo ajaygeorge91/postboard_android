@@ -1,0 +1,52 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="margin_full">16dp</dimen>
+    <dimen name="margin_half">8dp</dimen>
+    <dimen name="margin_quarter">4dp</dimen>
+
+    <dimen name="text_small_body">13sp</dimen>
+    <dimen name="text_body">15sp</dimen>
+    <dimen name="text_caption">13sp</dimen>
+    <dimen name="text_button">15sp</dimen>
+    <dimen name="text_subheading">17sp</dimen>
+    <dimen name="text_title">21sp</dimen>
+    <dimen name="text_headline">24sp</dimen>
+
+    <dimen name="common_component_height">40dp</dimen>
+    <dimen name="my_action_bar_height">40dp</dimen>
+    <dimen name="status_bar_height">24dp</dimen>
+    <dimen name="my_action_bar_and_status_bar_height">64dp</dimen>
+    <dimen name="my_action_bar_and_status_bar_height_plus_shadow">77dp</dimen>
+    <dimen name="negative_toolbar_shadow_margin">-13dp</dimen>
+    <dimen name="standard_icon_size">32dp</dimen>
+    <dimen name="reply_box_height">56dp</dimen>
+    <dimen name="standard_item_height">72dp</dimen>
+    <dimen name="article_side_margin">16dp</dimen>
+    <dimen name="article_padding">8dp</dimen>
+    <dimen name="article_padding_half">4dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="text_bottom_padding">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="rounded_border_radius">4dip</dimen>
+    <dimen name="line_spacing_extra_std">1dp</dimen>
+    <dimen name="app_bar_height">220dp</dimen>
+    <dimen name="negative_app_bar_height">-220dp</dimen>
+
+    <!-- Button -->
+    <dimen name="button_height">48dp</dimen> <!-- ボタンの高さ -->
+    <dimen name="button_radius">15dp</dimen> <!-- くぼみの丸み -->
+    <dimen name="button_inner_radius">11dp</dimen> <!-- ボタンの丸み -->
+    <dimen name="button_inner_margin">4dp</dimen> <!-- ボタンのマージン(くぼみの太さ) -->
+    <dimen name="button_glossy_marginTop">24dp</dimen> <!-- ボタンの光沢グラデーション位置(ボタンの高さの中央値) -->
+    <dimen name="button_content_paddingLeft">8dp</dimen> <!-- ボタン内の文字の左部パディング -->
+    <dimen name="button_content_paddingRight">8dp</dimen> <!-- ボタン内の文字の右部パディング -->
+    <dimen name="button_content_paddingTop">4dp</dimen> <!-- ボタン内の文字の上部パディング -->
+    <dimen name="button_content_paddingBottom">4dp</dimen> <!-- ボタン内の文字の下部パディング -->
+
+
+</resources>

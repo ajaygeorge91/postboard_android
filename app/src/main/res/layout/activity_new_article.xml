@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_bg"
+    android:fitsSystemWindows="false"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:activity=".ui.main.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/my_action_bar_height"
+                android:background="@color/white_semi_transparent">
+
+                <RelativeLayout
+                    android:id="@+id/back_button_layout"
+                    android:layout_width="@dimen/my_action_bar_height"
+                    android:layout_height="@dimen/my_action_bar_height"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_half">
+
+                    <ImageButton
+                        android:id="@+id/back_button_custom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/ic_action_arrow_back" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <include layout="@layout/layout_line_separator" />
+
+            <EditText
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_half"
+                android:layout_marginLeft="@dimen/margin_full"
+                android:layout_marginRight="@dimen/margin_full"
+                android:layout_marginTop="@dimen/margin_full"
+                android:hint="Add text"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_body"
+                android:textStyle="normal"
+                tools:text="" />
+
+            <ImageView
+                android:id="@+id/image_article"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/content_description_image"
+                android:minHeight="10dp"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black_overlay_1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/button_add_image_cam_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:clickable="true"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/button_add_image_cam"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="@dimen/margin_full"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/add_camera" />
+                </LinearLayout>
+
+                <View xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/button_add_image_gallery_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:clickable="true"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/button_add_image_gallery"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="@dimen/margin_full"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/add_gallery" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/text_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_half"
+                android:layout_marginLeft="@dimen/margin_full"
+                android:layout_marginRight="@dimen/margin_full"
+                android:layout_marginTop="@dimen/margin_full"
+                android:hint="Add content"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_body"
+                android:textStyle="normal"
+                tools:text="" />
+
+            <include layout="@layout/layout_line_separator" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button_add_article"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_action_bar_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin_full"
+        android:layout_marginRight="@dimen/margin_full"
+        android:text="Add POST" />
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context="online.postboard.android.ui.userprofile.UserProfileActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_user_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_bg"
+        android:clipToPadding="false"
+        android:paddingBottom="?attr/actionBarSize"
+        android:paddingTop="@dimen/my_action_bar_height"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/item_article" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_user_profile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_action_bar_height"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/status_bar_color"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/back_button_layout_user_profile"
+                android:layout_width="@dimen/my_action_bar_height"
+                android:layout_height="@dimen/my_action_bar_height"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="@dimen/margin_half">
+
+                <ImageButton
+                    android:id="@+id/back_button_user_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_action_arrow_back" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/toolbar_user_profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <online.postboard.android.util.widgets.CircularImageView
+                    android:id="@+id/user_profile_image_toolbar"
+                    android:layout_width="@dimen/standard_icon_size"
+                    android:layout_height="@dimen/standard_icon_size"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:tint="@color/nice_dark_shade"
+                    app:civ_border_width="1dp" />
+
+                <TextView
+                    android:id="@+id/user_name_profile_toolbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:padding="@dimen/margin_half"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_body"
+                    tools:text="John Smith" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.CoordinatorLayout>
